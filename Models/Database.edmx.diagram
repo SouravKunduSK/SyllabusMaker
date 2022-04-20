@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aaa8cae0322f46baa0ac3586c210cbb3" Name="Diagram1">
+        <EntityTypeShape EntityType="SyllabusMakerModel.AssessmentStrategie" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.Book" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.BookType" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.CLO" Width="1.5" PointX="7.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.Course" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.CourseDetail" Width="1.5" PointX="7.5" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.CourseObjective" Width="1.5" PointX="7.5" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.CourseType" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.LearningPlan" Width="1.5" PointX="9.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.Mark" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusMakerModel.TeachingStrategie" Width="1.5" PointX="7.5" PointY="20.875" IsExpanded="true" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__LearningP__Asses__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__Book__BookTypeId__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__Book__CourseId__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__CLO__CourseId__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__LearningP__CLOId__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__Course__CourseTy__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__Course__MarksId__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__CourseDet__Cours__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__CourseObj__Cours__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__Marks__CourseTyp__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="SyllabusMakerModel.FK__LearningP__Teach__3C69FB99" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
