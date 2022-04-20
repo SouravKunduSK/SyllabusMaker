@@ -29,6 +29,14 @@ namespace SyllabusMaker.Controllers.Admin
         {
             List<CourseType> TypeList = db.CourseTypes.ToList();
             ViewBag.TypeList = new SelectList(TypeList, "CourseTypeId", "Type");
+            if(c.CourseTypeId==1)
+            {
+                c.MarksId = 1;
+            }
+            else
+            {
+                c.MarksId = 2;
+            }
             db.Courses.Add(c);
             db.SaveChanges();
             return RedirectToAction("Index", "Course");
