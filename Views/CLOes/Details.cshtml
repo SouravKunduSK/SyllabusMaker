@@ -1,0 +1,35 @@
+﻿@model SyllabusMaker.Models.CLO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CLO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Outcomes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Outcomes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.CourseCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.CourseCode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CLOId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
