@@ -43,7 +43,7 @@
                     <div class="col-md-10">
                         <h6>Course Code</h6>
                         @Html.EditorFor(model => model.CourseCode, new { htmlAttributes = new { @class = "form-control" }  })
-                        @Html.ValidationMessageFor(model => model.CourseCode, "", new { @class = "text-danger" })
+                        @Html.ValidationMessageFor(model => model.CourseCode, "Example(CSE-1101/CSE-1102)", new { @class = "text-danger" })
                     </div>
                 </div>
             </div>

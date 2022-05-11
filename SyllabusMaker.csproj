@@ -141,8 +141,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\Admin\CLOesController.cs" />
+    <Compile Include="Controllers\Admin\CLOController.cs" />
     <Compile Include="Controllers\Admin\CourseController.cs" />
+    <Compile Include="Controllers\Admin\CourseObjectivesController.cs" />
     <Compile Include="Controllers\Admin\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1734,11 +1735,10 @@
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Course\Index.cshtml" />
     <Content Include="Views\Course\Create.cshtml" />
-    <Content Include="Views\CLOes\Create.cshtml" />
-    <Content Include="Views\CLOes\Delete.cshtml" />
-    <Content Include="Views\CLOes\Details.cshtml" />
-    <Content Include="Views\CLOes\Edit.cshtml" />
-    <Content Include="Views\CLOes\Index.cshtml" />
+    <Content Include="Views\CourseObjectives\Create.cshtml" />
+    <Content Include="Views\CourseObjectives\Index.cshtml" />
+    <Content Include="Views\CLO\Index.cshtml" />
+    <Content Include="Views\CLO\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

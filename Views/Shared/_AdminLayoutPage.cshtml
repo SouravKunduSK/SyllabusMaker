@@ -61,11 +61,11 @@
             </li>
 
             @*<li class="nav-item">
-                    <a class="nav-link" href="@(Session["sellername"] != null ? Url.Action("Index", "District") : Url.Action("Login", "SAccount"))" type="button">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Districts</span>
-                    </a>
-                </li>*@
+            <a class="nav-link" href="@(Session["sellername"] != null ? Url.Action("Index", "District") : Url.Action("Login", "SAccount"))" type="button">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Districts</span>
+            </a>
+        </li>*@
 
             <li class="nav-item">
                 <a class="nav-link" href="@( Url.Action("Index", "Course"))" type="button">
@@ -74,52 +74,20 @@
                 </a>
             </li>
 
-            @*<li class="nav-item">
-                <a class="nav-link" href="@(Session["username"] != null ? Url.Action("Index", "RunBook") : Url.Action("Login", "Account"))" type="button">
-                    <i class="fas fa-fw fa-book-reader "></i>
-                    <span>Running Books</span>
+            <li class="nav-item">
+                <a class="nav-link" href="@( Url.Action("Index", "CourseObjectives"))" type="button">
+                    <i class="fas fa-fw fa-book-open"></i>
+                    <span>Course Objectives</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="@(Session["username"] != null ? Url.Action("Completed", "Book") : Url.Action("Login", "Account"))" type="button">
-                    <i class="fas fa-fw fa-bookmark"></i>
-                    <span>Completed Books</span>
+                <a class="nav-link" href="@( Url.Action("Index", "CLO"))" type="button">
+                    <i class="fas fa-fw fa-book-open"></i>
+                    <span>Learning Outcomes</span>
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="@(Session["username"] != null ? Url.Action("Index", "UnBook") : Url.Action("Login", "Account"))" type="button">
-                    <i class="fas fa-fw fa-book "></i>
-                    <span>Unread Books</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="@(Session["username"] != null ? Url.Action("Index", "Lend") : Url.Action("Login", "Account"))" type="button">
-                    <i class="fas fa-fw fa-parachute-box "></i>
-                    <span>Lended Books</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="@(Session["username"] != null ? Url.Action("Index", "BuyBook") : Url.Action("Login", "Account"))" type="button">
-                    <i class="fas fa-fw fa-gift "></i>
-                    <span>Buyable Books</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="@(Session["username"] != null ? Url.Action("Index", "Category") : Url.Action("Login", "Account"))" type="button">
-                    <i class="fas fa-fw fa-search-plus "></i>
-                    <span>Categories</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="@(Session["username"] != null ? Url.Action("Index", "Author") : Url.Action("Login", "Account"))" type="button">
-                    <i class="fas fa-fw fa-people-carry "></i>
-                    <span>Authors</span>
-                </a>
-            </li>*@
         </ul>
         <div id="content-wrapper">
 
