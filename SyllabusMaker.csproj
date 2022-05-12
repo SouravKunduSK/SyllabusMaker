@@ -142,6 +142,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Admin\AssessmentStrategiesController.cs" />
+    <Compile Include="Controllers\Admin\CIEController.cs" />
     <Compile Include="Controllers\Admin\CLOController.cs" />
     <Compile Include="Controllers\Admin\CourseController.cs" />
     <Compile Include="Controllers\Admin\CourseObjectivesController.cs" />
@@ -1651,6 +1652,7 @@
     <Content Include="Style\vendor\jquery\jquery.min.js" />
     <Content Include="Style\vendor\jquery\jquery.slim.js" />
     <Content Include="Style\vendor\jquery\jquery.slim.min.js" />
+    <None Include="Views\CIE\Create.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -5,17 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7c93a3f13f954203a301d67c29693068" Name="Diagram1">
-        <EntityTypeShape EntityType="SyllabusmakerModel.AssessmentStrategie" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.Book" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.BookType" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.CLO" Width="1.5" PointX="7.5" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.Course" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.CourseDetail" Width="1.5" PointX="7.5" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.CourseObjective" Width="1.5" PointX="7.5" PointY="18.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.CourseType" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.LearningPlan" Width="1.5" PointX="9.75" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.Mark" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SyllabusmakerModel.TeachingStrategie" Width="1.5" PointX="7.5" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.AssessmentStrategie" Width="1.5" PointX="4.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.Book" Width="1.5" PointX="2.375" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.BookType" Width="1.5" PointX="2.375" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.CLO" Width="1.5" PointX="4.625" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.Course" Width="1.5" PointX="0.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.CourseDetail" Width="1.5" PointX="5.625" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.CourseObjective" Width="1.5" PointX="2.125" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.CourseType" Width="1.5" PointX="0.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.LearningPlan" Width="1.5" PointX="6.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.Mark" Width="1.5" PointX="2.625" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyllabusmakerModel.TeachingStrategie" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
         <AssociationConnector Association="SyllabusmakerModel.FK__LearningP__Asses__5070F446" ManuallyRouted="false" />
         <AssociationConnector Association="SyllabusmakerModel.FK__Book__BookTypeId__49C3F6B7" ManuallyRouted="false" />
         <AssociationConnector Association="SyllabusmakerModel.FK__Book__CourseId__4AB81AF0" ManuallyRouted="false" />
