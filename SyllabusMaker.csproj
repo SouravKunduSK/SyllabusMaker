@@ -141,6 +141,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Admin\AssessmentStrategiesController.cs" />
     <Compile Include="Controllers\Admin\CLOController.cs" />
     <Compile Include="Controllers\Admin\CourseController.cs" />
     <Compile Include="Controllers\Admin\CourseObjectivesController.cs" />
@@ -1739,6 +1740,8 @@
     <Content Include="Views\CourseObjectives\Index.cshtml" />
     <Content Include="Views\CLO\Index.cshtml" />
     <Content Include="Views\CLO\Create.cshtml" />
+    <Content Include="Views\AssessmentStrategies\Index.cshtml" />
+    <Content Include="Views\AssessmentStrategies\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
