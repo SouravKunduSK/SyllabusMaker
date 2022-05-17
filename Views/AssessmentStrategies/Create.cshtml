@@ -48,13 +48,13 @@
             <div class="col-md-6">
                 <div class="form-group"  >
 
-                    <div class="col-md-10" >
+                    <div class="col-md-10">
                         <h6>Description</h6>
                         
 
-                        @Html.TextArea("Description","" ,new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                        
+
                     </div>
                 </div>
             </div>
