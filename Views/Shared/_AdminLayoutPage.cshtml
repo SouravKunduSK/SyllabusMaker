@@ -60,12 +60,6 @@
                 </a>
             </li>
 
-            @*<li class="nav-item">
-            <a class="nav-link" href="@(Session["sellername"] != null ? Url.Action("Index", "District") : Url.Action("Login", "SAccount"))" type="button">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Districts</span>
-            </a>
-        </li>*@
 
             <li class="nav-item">
                 <a class="nav-link" href="@( Url.Action("Index", "Course"))" type="button">
@@ -92,6 +86,20 @@
                 <a class="nav-link" href="@( Url.Action("Index", "AssessmentStrategies"))" type="button">
                     <i class="fas fa-fw fa-book-open"></i>
                     <span>Assessment Strategies</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="@( Url.Action("Index", "TeachingStrategies"))" type="button">
+                    <i class="fas fa-fw fa-book-open"></i>
+                    <span>Teaching Strategies</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="@( Url.Action("Index", "References"))" type="button">
+                    <i class="fas fa-fw fa-book-open"></i>
+                    <span>References</span>
                 </a>
             </li>
 
