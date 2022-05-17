@@ -147,6 +147,7 @@
     <Compile Include="Controllers\Admin\CourseController.cs" />
     <Compile Include="Controllers\Admin\CourseObjectivesController.cs" />
     <Compile Include="Controllers\Admin\DashboardController.cs" />
+    <Compile Include="Controllers\Admin\LessonPlanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1744,6 +1745,8 @@
     <Content Include="Views\CLO\Create.cshtml" />
     <Content Include="Views\AssessmentStrategies\Index.cshtml" />
     <Content Include="Views\AssessmentStrategies\Create.cshtml" />
+    <Content Include="Views\LessonPlan\Index.cshtml" />
+    <Content Include="Views\LessonPlan\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

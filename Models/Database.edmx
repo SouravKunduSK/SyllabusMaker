@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SyllabusmakerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SyllabusmakerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AssessmentStrategie">
           <Key>
             <PropertyRef Name="AssessmentStrategieId" />
@@ -86,6 +86,7 @@
           <Property Name="CLOId" Type="int" />
           <Property Name="TeachingStrategieId" Type="int" />
           <Property Name="AssessmentStrategieId" Type="int" />
+          <Property Name="LearningOutcome" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Marks">
           <Key>
@@ -106,7 +107,7 @@
           <Property Name="TeachingStrategieId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Strategies" Type="nvarchar" MaxLength="255" />
         </EntityType>
-        <Association Name="FK__Book__BookTypeId__49C3F6B7">
+        <Association Name="FK__Book__BookTypeId__3A81B327">
           <End Role="BookType" Type="Self.BookType" Multiplicity="0..1" />
           <End Role="Book" Type="Self.Book" Multiplicity="*" />
           <ReferentialConstraint>
@@ -118,7 +119,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Book__CourseId__4AB81AF0">
+        <Association Name="FK__Book__CourseId__3F466844">
           <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
           <End Role="Book" Type="Self.Book" Multiplicity="*" />
           <ReferentialConstraint>
@@ -130,7 +131,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CLO__CourseId__4BAC3F29">
+        <Association Name="FK__CLO__CourseId__412EB0B6">
           <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
           <End Role="CLO" Type="Self.CLO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -142,7 +143,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Course__CourseTy__4CA06362">
+        <Association Name="FK__Course__CourseTy__37A5467C">
           <End Role="CourseType" Type="Self.CourseType" Multiplicity="0..1" />
           <End Role="Course" Type="Self.Course" Multiplicity="*" />
           <ReferentialConstraint>
@@ -154,7 +155,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Course__MarksId__4D94879B">
+        <Association Name="FK__Course__MarksId__38996AB5">
           <End Role="Marks" Type="Self.Marks" Multiplicity="0..1" />
           <End Role="Course" Type="Self.Course" Multiplicity="*" />
           <ReferentialConstraint>
@@ -166,7 +167,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CourseDet__Cours__4E88ABD4">
+        <Association Name="FK__CourseDet__Cours__3E52440B">
           <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
           <End Role="CourseDetail" Type="Self.CourseDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -178,7 +179,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CourseObj__Cours__4F7CD00D">
+        <Association Name="FK__CourseObj__Cours__403A8C7D">
           <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
           <End Role="CourseObjective" Type="Self.CourseObjective" Multiplicity="*" />
           <ReferentialConstraint>
@@ -190,7 +191,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LearningP__Asses__5070F446">
+        <Association Name="FK__LearningP__Asses__3B75D760">
           <End Role="AssessmentStrategie" Type="Self.AssessmentStrategie" Multiplicity="0..1" />
           <End Role="LearningPlan" Type="Self.LearningPlan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -202,7 +203,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LearningP__CLOId__52593CB8">
+        <Association Name="FK__LearningP__CLOId__3D5E1FD2">
           <End Role="CLO" Type="Self.CLO" Multiplicity="0..1" />
           <End Role="LearningPlan" Type="Self.LearningPlan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -214,7 +215,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LearningP__Teach__5165187F">
+        <Association Name="FK__LearningP__Teach__3C69FB99">
           <End Role="TeachingStrategie" Type="Self.TeachingStrategie" Multiplicity="0..1" />
           <End Role="LearningPlan" Type="Self.LearningPlan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -226,7 +227,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Marks__CourseTyp__534D60F1">
+        <Association Name="FK__Marks__CourseTyp__398D8EEE">
           <End Role="CourseType" Type="Self.CourseType" Multiplicity="0..1" />
           <End Role="Marks" Type="Self.Marks" Multiplicity="*" />
           <ReferentialConstraint>
@@ -250,53 +251,52 @@
           <EntitySet Name="LearningPlan" EntityType="Self.LearningPlan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Marks" EntityType="Self.Marks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TeachingStrategie" EntityType="Self.TeachingStrategie" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Book__BookTypeId__49C3F6B7" Association="Self.FK__Book__BookTypeId__49C3F6B7">
+          <AssociationSet Name="FK__Book__BookTypeId__3A81B327" Association="Self.FK__Book__BookTypeId__3A81B327">
             <End Role="BookType" EntitySet="BookType" />
             <End Role="Book" EntitySet="Book" />
           </AssociationSet>
-          <AssociationSet Name="FK__Book__CourseId__4AB81AF0" Association="Self.FK__Book__CourseId__4AB81AF0">
+          <AssociationSet Name="FK__Book__CourseId__3F466844" Association="Self.FK__Book__CourseId__3F466844">
             <End Role="Course" EntitySet="Course" />
             <End Role="Book" EntitySet="Book" />
           </AssociationSet>
-          <AssociationSet Name="FK__CLO__CourseId__4BAC3F29" Association="Self.FK__CLO__CourseId__4BAC3F29">
+          <AssociationSet Name="FK__CLO__CourseId__412EB0B6" Association="Self.FK__CLO__CourseId__412EB0B6">
             <End Role="Course" EntitySet="Course" />
             <End Role="CLO" EntitySet="CLO" />
           </AssociationSet>
-          <AssociationSet Name="FK__Course__CourseTy__4CA06362" Association="Self.FK__Course__CourseTy__4CA06362">
+          <AssociationSet Name="FK__Course__CourseTy__37A5467C" Association="Self.FK__Course__CourseTy__37A5467C">
             <End Role="CourseType" EntitySet="CourseType" />
             <End Role="Course" EntitySet="Course" />
           </AssociationSet>
-          <AssociationSet Name="FK__Course__MarksId__4D94879B" Association="Self.FK__Course__MarksId__4D94879B">
+          <AssociationSet Name="FK__Course__MarksId__38996AB5" Association="Self.FK__Course__MarksId__38996AB5">
             <End Role="Marks" EntitySet="Marks" />
             <End Role="Course" EntitySet="Course" />
           </AssociationSet>
-          <AssociationSet Name="FK__CourseDet__Cours__4E88ABD4" Association="Self.FK__CourseDet__Cours__4E88ABD4">
+          <AssociationSet Name="FK__CourseDet__Cours__3E52440B" Association="Self.FK__CourseDet__Cours__3E52440B">
             <End Role="Course" EntitySet="Course" />
             <End Role="CourseDetail" EntitySet="CourseDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__CourseObj__Cours__4F7CD00D" Association="Self.FK__CourseObj__Cours__4F7CD00D">
+          <AssociationSet Name="FK__CourseObj__Cours__403A8C7D" Association="Self.FK__CourseObj__Cours__403A8C7D">
             <End Role="Course" EntitySet="Course" />
             <End Role="CourseObjective" EntitySet="CourseObjective" />
           </AssociationSet>
-          <AssociationSet Name="FK__LearningP__Asses__5070F446" Association="Self.FK__LearningP__Asses__5070F446">
+          <AssociationSet Name="FK__LearningP__Asses__3B75D760" Association="Self.FK__LearningP__Asses__3B75D760">
             <End Role="AssessmentStrategie" EntitySet="AssessmentStrategie" />
             <End Role="LearningPlan" EntitySet="LearningPlan" />
           </AssociationSet>
-          <AssociationSet Name="FK__LearningP__CLOId__52593CB8" Association="Self.FK__LearningP__CLOId__52593CB8">
+          <AssociationSet Name="FK__LearningP__CLOId__3D5E1FD2" Association="Self.FK__LearningP__CLOId__3D5E1FD2">
             <End Role="CLO" EntitySet="CLO" />
             <End Role="LearningPlan" EntitySet="LearningPlan" />
           </AssociationSet>
-          <AssociationSet Name="FK__LearningP__Teach__5165187F" Association="Self.FK__LearningP__Teach__5165187F">
+          <AssociationSet Name="FK__LearningP__Teach__3C69FB99" Association="Self.FK__LearningP__Teach__3C69FB99">
             <End Role="TeachingStrategie" EntitySet="TeachingStrategie" />
             <End Role="LearningPlan" EntitySet="LearningPlan" />
           </AssociationSet>
-          <AssociationSet Name="FK__Marks__CourseTyp__534D60F1" Association="Self.FK__Marks__CourseTyp__534D60F1">
+          <AssociationSet Name="FK__Marks__CourseTyp__398D8EEE" Association="Self.FK__Marks__CourseTyp__398D8EEE">
             <End Role="CourseType" EntitySet="CourseType" />
             <End Role="Marks" EntitySet="Marks" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SyllabusmakerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -400,6 +400,7 @@
           <NavigationProperty Name="AssessmentStrategie" Relationship="Self.FK__LearningP__Asses__5070F446" FromRole="LearningPlan" ToRole="AssessmentStrategie" />
           <NavigationProperty Name="CLO" Relationship="Self.FK__LearningP__CLOId__52593CB8" FromRole="LearningPlan" ToRole="CLO" />
           <NavigationProperty Name="TeachingStrategie" Relationship="Self.FK__LearningP__Teach__5165187F" FromRole="LearningPlan" ToRole="TeachingStrategie" />
+          <Property Name="LearningOutcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Mark">
           <Key>
@@ -700,6 +701,7 @@
           <EntitySetMapping Name="LearningPlans">
             <EntityTypeMapping TypeName="SyllabusmakerModel.LearningPlan">
               <MappingFragment StoreEntitySet="LearningPlan">
+                <ScalarProperty Name="LearningOutcome" ColumnName="LearningOutcome" />
                 <ScalarProperty Name="PlanId" ColumnName="PlanId" />
                 <ScalarProperty Name="Timeline" ColumnName="Timeline" />
                 <ScalarProperty Name="Topics" ColumnName="Topics" />
