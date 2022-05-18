@@ -1749,6 +1749,7 @@
     <Content Include="Views\LessonPlan\Index.cshtml" />
     <Content Include="Views\LessonPlan\Create.cshtml" />
     <Content Include="Views\Resource\Index.cshtml" />
+    <Content Include="Views\Resource\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
