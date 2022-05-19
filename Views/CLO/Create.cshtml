@@ -49,11 +49,9 @@
 
                     <div class="col-md-10">
                         <h6>Learning Outcome</h6>
-                        @*@Html.TextArea("Description", "", new { cols = "60", rows = "5", htmlAttributes = new { @class = "form-control " } })
+                    
 
-        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })*@
-
-                        @Html.TextAreaFor(model => model.Outcomes, new { cols = "60", rows = "5", htmlAttributes = new { @class = "form-control" } })
+                       
                         @Html.TextAreaFor(model=>model.Outcomes, new { cols = "60", rows = "5", htmlAttributes = new { @class = "form-control " } })
                         @Html.ValidationMessageFor(model => model.Outcomes, "", new { @class = "text-danger" })
 
