@@ -149,7 +149,9 @@
     <Compile Include="Controllers\Admin\DashboardController.cs" />
     <Compile Include="Controllers\Admin\LessonPlanController.cs" />
     <Compile Include="Controllers\Admin\ResourceController.cs" />
+    <Compile Include="Controllers\Admin\TeachingStrategieController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewAdmin\WriteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1750,9 +1752,12 @@
     <Content Include="Views\LessonPlan\Create.cshtml" />
     <Content Include="Views\Resource\Index.cshtml" />
     <Content Include="Views\Resource\Create.cshtml" />
+    <Content Include="Views\TeachingStrategie\Index.cshtml" />
+    <Content Include="Views\TeachingStrategie\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Write\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
