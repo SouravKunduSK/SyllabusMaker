@@ -21,6 +21,7 @@ namespace SyllabusMaker.Models
             this.CLOes = new HashSet<CLO>();
             this.CourseDetails = new HashSet<CourseDetail>();
             this.CourseObjectives = new HashSet<CourseObjective>();
+            this.LearningPlans = new HashSet<LearningPlan>();
         }
     
         public int CourseId { get; set; }
@@ -43,5 +44,7 @@ namespace SyllabusMaker.Models
         public virtual ICollection<CourseDetail> CourseDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CourseObjective> CourseObjectives { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LearningPlan> LearningPlans { get; set; }
     }
 }

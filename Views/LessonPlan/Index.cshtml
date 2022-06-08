@@ -28,19 +28,19 @@
             <div class="table-responsive">
                 <table class="table table-condensed table-hover table-bordered table-striped table" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                      
+
 
                         <tr>
 
                             <th>Timeline</th>
                             <th>Topics/Contents</th>
-                            
+
                             <th>Learning Outcomes</th>
                             <th>Mapped CLOs</th>
 
                             <th>Teaching Strategies</th>
                             <th>Assessment Strategies</th>
-                            
+
                             <th>Action</th>
 
                         </tr>
@@ -61,7 +61,7 @@
                                 <td>@item.CLO.Outcomes</td>
                                 <td>@item.TeachingStrategie.Strategies</td>
                                 <td>@item.AssessmentStrategie.Strategies</td>
-                                
+
                                 @*<td><a href="@Url.Content(item.ImageURL)" target="_blank"><img src="@Url.Content(item.ImageURL)" style="width:100px; height:67px;" /></a></td>*@
                                 <td>
                                     <a href="@Url.Action("Edit", "Course", new { id = item.PlanId})" class="btn btn-info">Edit</a>
@@ -84,5 +84,3 @@
         </div>
     </div>
 </div>
-
-

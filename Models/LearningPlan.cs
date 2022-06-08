@@ -21,9 +21,11 @@ namespace SyllabusMaker.Models
         public Nullable<int> TeachingStrategieId { get; set; }
         public Nullable<int> AssessmentStrategieId { get; set; }
         public string LearningOutcome { get; set; }
+        public Nullable<int> CourseId { get; set; }
     
         public virtual AssessmentStrategie AssessmentStrategie { get; set; }
         public virtual CLO CLO { get; set; }
         public virtual TeachingStrategie TeachingStrategie { get; set; }
+        public virtual Course Course { get; set; }
     }
 }

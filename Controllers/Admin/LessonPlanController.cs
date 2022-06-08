@@ -10,10 +10,23 @@ namespace SyllabusMaker.Controllers.Admin
     public class LessonPlanController : Controller
     {
         SyllabusMakerEntities db = new SyllabusMakerEntities();
+
+
+
         // GET: LessonPlan
-        public ActionResult Index()
+
+
+        public ActionResult SubCode()
         {
-            var q = db.LearningPlans.ToList();
+            var q = db.Courses.ToList();
+            return View(q);
+        }
+
+       
+        public ActionResult Index(int?id)
+        {
+            Session["courseId"] = id;
+            var q = db.LearningPlans.Where(x=>x.Course.CourseId==id).ToList();
             return View(q);
         }
 
@@ -26,8 +39,7 @@ namespace SyllabusMaker.Controllers.Admin
         [HttpPost]
         public ActionResult Create(LearningPlan lp)
         {
-            //List<Course> CourseList = db.Courses.ToList();
-            //ViewBag.CourseList = new SelectList(CourseList, "CourseId", "CourseCode");
+            lp.CourseId = (int) Session["courseId"];
             db.LearningPlans.Add(lp);
             db.SaveChanges();
             return RedirectToAction("Index", "LessonPlan");
